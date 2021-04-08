@@ -24,7 +24,7 @@ export default function ProjectsPage() {
         description={"Coded with React from the ground up."}
         dateCreated={"April 4th, 2021"}
         coverImage={thisWebsiteImage}
-        detailLink={"/projects/"}
+        detailLink={"this-website"}
       />
       <ProjectPreview
         title={"Flower Knight"}

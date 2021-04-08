@@ -4,7 +4,7 @@ import { IMenuLink } from "./HeaderBar";
 
 export default function MenuButton(props: { links: IMenuLink[] }) {
   const [showMenu, setShowMenu] = useState(false);
-
+  console.log("test");
   const linkStyle = {
     textDecoration: "none",
     fontSize: "20px",
@@ -47,8 +47,8 @@ export default function MenuButton(props: { links: IMenuLink[] }) {
           setShowMenu(!showMenu);
         }}
         style={{
-          width: "40px",
-          height: "40px",
+          width: "80px",
+          height: "80px", //40px
           marginRight: "12px",
           display: "flex",
           flexDirection: "column",

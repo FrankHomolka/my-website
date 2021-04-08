@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useWindowSize } from "../Functions/useWindowSize";
-import googlePlayImage from "../Media/google-play-badge.png";
-import appStoreImage from "../Media/appstore.png";
 import { Link } from "react-router-dom";
+import "../style.css";
 
 export default function ProjectPreview(props: {
   title: string;
@@ -17,6 +16,7 @@ export default function ProjectPreview(props: {
 }) {
   const windowSize = useWindowSize();
   const [hovered, setHovered] = useState(false);
+
   return (
     <Link
       onMouseLeave={() => {
@@ -26,18 +26,16 @@ export default function ProjectPreview(props: {
         setHovered(true);
       }}
       to={props.detailLink}
+      className="projectPreview"
       style={{
         textDecoration: "none",
         color: "black",
-        width: windowSize.mobile ? "48%" : "30%",
         padding: "1%",
-        height: "400px",
         margin: "0 0 20px 0",
         display: "flex",
         justifyContent: "flex-start",
         alignItems: "center",
         flexDirection: "column",
-        backgroundColor: hovered ? "lightgray" : "white",
         fontFamily: "Anonymous Pro",
       }}
     >

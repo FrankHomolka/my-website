@@ -30,6 +30,7 @@ export default function FlowerknightPage() {
         techUsed={
           "Coded in Gamemaker Studio 2.0, art created in Aseprite, sound effects created with Reaper, music composed in Reaper."
         }
+        techIcons={["gamemaker", "aseprite", "reaper"]}
       />
     </div>
   );

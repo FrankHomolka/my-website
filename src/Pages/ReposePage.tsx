@@ -20,6 +20,7 @@ export default function ReposePage() {
         dateCreated={"January 20th, 2021"}
         coverImage={reposeImage}
         downloadLink={"test"}
+        techIcons={["godot", "reaper", "gimp"]}
       />
     </div>
   );

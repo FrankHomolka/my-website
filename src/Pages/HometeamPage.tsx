@@ -26,6 +26,7 @@ export default function HometeamPage() {
           "https://apps.apple.com/us/app/hometeam-provider-map/id1549171640"
         }
         links={["https://site.withhometeam.com/"]}
+        techIcons={["react", "css", "javascript", "html"]}
       />
     </div>
   );

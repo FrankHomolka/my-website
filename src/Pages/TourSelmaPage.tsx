@@ -24,6 +24,7 @@ export default function TourSelmaPage() {
         }
         appStoreLink={"https://apps.apple.com/us/app/tour-selma/id1477070272"}
         links={["https://tourselma.com/"]}
+        techIcons={["flutter", "dart"]}
       />
     </div>
   );
