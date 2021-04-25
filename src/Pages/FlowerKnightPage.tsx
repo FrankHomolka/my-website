@@ -1,9 +1,5 @@
-import React from "react";
 import ProjectDetails from "../Components/ProjectDetails";
 import flowerKnightImage from "../Media/flower_knight.png";
-import reposeImage from "../Media/repose.png";
-import hometeamImage from "../Media/hometeam.png";
-import selmaImage from "../Media/selma.png";
 
 export default function FlowerknightPage() {
   return (
@@ -11,7 +7,6 @@ export default function FlowerknightPage() {
       style={{
         width: "100%",
         height: "100%",
-        fontFamily: "Anonymous Pro",
       }}
     >
       <ProjectDetails

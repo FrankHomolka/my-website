@@ -36,7 +36,6 @@ export default function HeaderBar() {
         style={{
           width: "100%",
           maxWidth: windowSize.mobile ? "100%" : "1200px",
-          fontFamily: "Anonymous Pro",
           justifyContent: "space-between",
           flexDirection: "row",
           alignItems: "center",
@@ -53,7 +52,7 @@ export default function HeaderBar() {
             marginLeft: "16px",
           }}
         >
-          {windowSize.mobile ? "FH." : "Frank Homolka"}
+          FH.
         </Link>
         {/* Nav Links */}
         {windowSize.mobile ? (

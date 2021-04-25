@@ -11,7 +11,6 @@ export default function HometeamPage() {
       style={{
         width: "100%",
         height: "100%",
-        fontFamily: "Anonymous Pro",
       }}
     >
       <ProjectDetails

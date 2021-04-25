@@ -38,7 +38,6 @@ export default function ProjectPreview(props: {
         alignItems: "center",
         flexDirection: "column",
         backgroundColor: hovered ? "lightgray" : "white",
-        fontFamily: "Anonymous Pro",
       }}
     >
       <div style={{ fontSize: "20px", fontWeight: "bold", margin: "12px 0" }}>

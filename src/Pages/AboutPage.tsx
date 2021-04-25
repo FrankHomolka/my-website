@@ -53,7 +53,6 @@ export default function AboutPage() {
     <div
       style={{
         padding: "16px",
-        fontFamily: "Anonymous Pro",
       }}
     >
       <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>

@@ -15,7 +15,6 @@ export default function ProjectsPage() {
         flexDirection: "row",
         flexWrap: "wrap",
         height: "100%",
-        fontFamily: "Anonymous Pro",
         marginTop: "20px",
       }}
     >

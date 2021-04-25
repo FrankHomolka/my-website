@@ -27,7 +27,6 @@ export default function ProjectDetails(props: {
         alignItems: "center",
         flexDirection: "column",
         backgroundColor: "white",
-        fontFamily: "Anonymous Pro",
       }}
     >
       <div style={{ fontSize: "36px", fontWeight: "bold", margin: "24px 0" }}>

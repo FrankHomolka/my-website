@@ -1,6 +1,13 @@
 import React from "react";
 import { useWindowSize } from "../Functions/useWindowSize";
 import profileImage from "../Media/profile.jpg";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import flowerKnightImage from "../Media/flower_knight.png";
+import reposeImage from "../Media/repose.png";
+import hometeamImage from "../Media/hometeam.png";
+import selmaImage from "../Media/selma.png";
 
 export default function HomePage() {
   const windowSize = useWindowSize();
@@ -23,13 +30,78 @@ export default function HomePage() {
     display: "flex",
     flexDirection: windowSize.mobile ? "column" : "row",
   };
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
+  const slideImageStyle: React.CSSProperties = {
+    width: "100%",
+    height: "500px",
+    objectFit: "cover",
+  };
+
+  const overlayStyle: React.CSSProperties = {
+    position: "absolute",
+    width: "100%",
+    height: "500px",
+    backgroundColor: "black",
+    color: "black",
+    opacity: "25%",
+  };
+
+  function Button() {
+    return (
+      <div
+        style={{
+          backgroundColor: "red",
+          color: "white",
+          width: "150px",
+          height: "40px",
+          borderRadius: "20px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "absolute",
+          top: "90%",
+          left: "50%",
+          textAlign: "center",
+        }}
+      >
+        Learn More
+      </div>
+    );
+  }
+
+  function Slide(props: { image: string }) {
+    return (
+      <div>
+        <div style={{ position: "relative" }}>
+          <div style={overlayStyle}></div>
+          <img style={slideImageStyle} src={props.image} />
+          <Button />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       style={{
         padding: "16px",
-        fontFamily: "Anonymous Pro",
       }}
     >
+      <Slider {...settings}>
+        <Slide image={flowerKnightImage} />
+        <Slide image={reposeImage} />
+        <Slide image={hometeamImage} />
+        <Slide image={selmaImage} />
+      </Slider>
       <div
         style={{
           display: "flex",

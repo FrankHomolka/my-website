@@ -11,7 +11,6 @@ export default function TourSelmaPage() {
       style={{
         width: "100%",
         height: "100%",
-        fontFamily: "Anonymous Pro",
       }}
     >
       <ProjectDetails
