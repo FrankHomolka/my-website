@@ -1,0 +1,25 @@
+/* Changes project preview css on hover */
+
+.projectPreview {
+  width: 30%;
+  height: 400px;
+  background-color: white;
+  transition: width 0.5s, height 0.5s, background-color 0.5s;
+}
+
+.projectPreview:hover {
+  background-color: whitesmoke;
+  width: 32%;
+  height: 420px;
+}
+
+@media screen and (max-width: 800px) {
+  .projectPreview {
+    width: 48%;
+    height: 400px;
+  }
+  .projectPreview:hover {
+    width: 48%;
+    height: 400px;
+  }
+}

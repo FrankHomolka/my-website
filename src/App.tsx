@@ -9,6 +9,7 @@ import TourSelmaPage from "./Pages/TourSelmaPage";
 import HometeamPage from "./Pages/HometeamPage";
 import ReposePage from "./Pages/ReposePage";
 import FlowerknightPage from "./Pages/FlowerKnightPage";
+import ThisWebsitePage from "./Pages/ThisWebsitePage";
 
 export default function App() {
   const windowSize = useWindowSize();
@@ -50,6 +51,9 @@ export default function App() {
             </Route>
             <Route path="/projects/repose" exact={true}>
               <ReposePage />
+            </Route>
+            <Route path="/projects/this-website" exact={true}>
+              <ThisWebsitePage />
             </Route>
             <Route path="/">
               <HomePage />
