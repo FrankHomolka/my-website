@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import "../style.css";
 
 export default function ProjectPreview(props: {
-  title: string;
   dateCreated: string;
   coverImage?: string;
   coverVideo?: string;
@@ -13,62 +12,83 @@ export default function ProjectPreview(props: {
   appStoreLink?: string;
   links?: string[];
   detailLink: string;
+  titleImage?: string;
+  titleString?: string;
 }) {
   const windowSize = useWindowSize();
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link
-      onMouseLeave={() => {
-        setHovered(false);
-      }}
-      onMouseEnter={() => {
-        setHovered(true);
-      }}
-      to={props.detailLink}
-      className="projectPreview"
+    <div
       style={{
-        textDecoration: "none",
-        color: "black",
-        padding: "1%",
-        margin: "0 0 20px 0",
+        padding: "0.5%",
+        width: windowSize.mobile ? "100%" : "32%",
+        height: "200px",
         display: "flex",
-        justifyContent: "flex-start",
+        justifyContent: "center",
+        margin: windowSize.mobile ? "12px 0" : "0",
         alignItems: "center",
-        flexDirection: "column",
       }}
     >
-      <div style={{ fontSize: "20px", fontWeight: "bold", margin: "12px 0" }}>
-        {props.title}
-      </div>
-      {props.coverImage && (
-        <img
-          src={props.coverImage}
-          style={{ width: "100%", height: "200px", objectFit: "cover" }}
-        />
-      )}
-      <div
+      <Link
+        onMouseLeave={() => {
+          setHovered(false);
+        }}
+        onMouseEnter={() => {
+          setHovered(true);
+        }}
+        to={"/projects/" + props.detailLink}
+        className="projectPreview"
         style={{
-          fontSize: "14px",
-          margin: "12px 0",
-          color: "gray",
-          width: "100%",
+          textDecoration: "none",
+          borderRadius: "20px",
+          position: "relative",
+          display: "flex",
+          justifyContent: "flex-start",
+          alignItems: "center",
+          flexDirection: "column",
         }}
       >
-        {props.dateCreated}
-      </div>
-      <div style={{ margin: "10px 20px", height: "55px" }}>
-        {props.description}
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          width: "100%",
-          justifyContent: "flex-start",
-        }}
-      ></div>
-      <div style={{ width: "100%", borderBottom: "1px solid gray" }}></div>
-    </Link>
+        {props.coverImage && (
+          <img
+            src={props.coverImage}
+            style={{
+              width: "100%",
+              height: "800px",
+              objectFit: "cover",
+              borderRadius: "20px",
+              backgroundColor: "transparent",
+            }}
+          />
+        )}
+        {props.titleString && (
+          <div
+            style={{
+              width: "150px",
+              position: "absolute",
+              top: "0",
+              left: "0",
+              color: "white",
+              fontSize: "25px",
+              padding: "5%",
+            }}
+          >
+            {props.titleString}
+          </div>
+        )}
+        {props.titleImage && (
+          <img
+            src={props.titleImage}
+            style={{
+              width: "150px",
+              position: "absolute",
+              top: "0",
+              left: "0",
+              padding: "5%",
+            }}
+          />
+        )}
+      </Link>
+    </div>
   );
 }

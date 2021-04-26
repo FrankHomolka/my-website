@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectDetails from "../Components/ProjectDetails";
-import thisWebsiteImage from "../Media/this-website.png";
+import thisWebsiteImage from "../Media/this_website.png";
 
 export default function ThisWebsitePage() {
   return (
