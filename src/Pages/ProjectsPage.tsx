@@ -30,7 +30,7 @@ export default function FlowerknightPage() {
         }
         links={["https://site.withhometeam.com/"]}
         techIcons={["react", "css", "javascript", "html"]}
-        titleColor={"#141294"}
+        titleColor={"#9ca9d1"}
       />
       <ProjectDetails
         title={"Tour Selma"}

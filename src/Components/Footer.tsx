@@ -16,25 +16,24 @@ export default function Footer() {
         height: "120px",
         display: "flex",
         justifyContent: "center",
-        backgroundColor: theme.colors.primary,
       }}
     >
       <div
         style={{
           width: "100%",
-          maxWidth: windowSize.mobile ? "100%" : "1200px",
           justifyContent: "space-between",
           flexDirection: "row",
           alignItems: "center",
           display: "flex",
+          paddingLeft: "16px",
         }}
       >
         {/* Contact Info */}
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ margin: "6px", color: "white" }}>
+          <div style={{ margin: "6px", color: "black" }}>
             frankwhomolka@gmail.com
           </div>
-          <div style={{ margin: "6px", color: "white" }}>(828) 545-0966</div>
+          <div style={{ margin: "6px", color: "black" }}>(828) 545-0966</div>
         </div>
       </div>
     </div>

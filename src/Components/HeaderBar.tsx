@@ -14,13 +14,14 @@ export default function HeaderBar() {
   const linkStyle = {
     fontSize: "20px",
     margin: windowSize.mobile ? "0" : "0 10px",
-    color: "white",
+    color: "black",
   };
 
   const links: IMenuLink[] = [
     { url: "/", label: "Home" },
     { url: "/about", label: "About" },
-    { url: "/projects", label: "Projects" },
+    { url: "/projects", label: "Coding" },
+    { url: "/music", label: "Music" },
   ];
 
   return (
@@ -30,13 +31,14 @@ export default function HeaderBar() {
         height: "100px",
         display: "flex",
         justifyContent: "center",
-        backgroundColor: theme.colors.primary,
+        borderBottom: "1px solid lightgray",
       }}
     >
       <div
         style={{
           width: "100%",
-          maxWidth: windowSize.mobile ? "100%" : "1200px",
+          maxWidth: "100%",
+          padding: "0 16px",
           justifyContent: "space-between",
           flexDirection: "row",
           alignItems: "center",
@@ -49,8 +51,8 @@ export default function HeaderBar() {
           style={{
             textDecoration: "none",
             fontSize: windowSize.mobile ? "50px" : "35px",
-            color: "white",
-            marginLeft: "16px",
+            color: "black",
+            paddingLeft: "16px",
             fontWeight: "bold",
             fontFamily: "Anonymous Pro",
           }}

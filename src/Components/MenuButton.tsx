@@ -20,7 +20,7 @@ export default function MenuButton(props: { links: IMenuLink[] }) {
           height: "36px",
           borderRadius: "50%",
           backgroundColor: "transparent",
-          border: showMenu ? "2px solid white" : "none",
+          border: showMenu ? "2px solid black" : "none",
           position: "relative",
         }}
       >
@@ -30,7 +30,7 @@ export default function MenuButton(props: { links: IMenuLink[] }) {
             height: "28px",
             borderRadius: "50%",
             position: "absolute",
-            backgroundColor: "white",
+            backgroundColor: "black",
             top: "50%",
             left: "50%",
             margin: "-14px 0px 0px -14px",

@@ -7,6 +7,7 @@ import { useWindowSize } from "./Functions/useWindowSize";
 import ContactPage from "./Pages/ContactPage";
 import Footer from "./Components/Footer";
 import ProjectsPage from "./Pages/ProjectsPage";
+import MusicPage from "./Pages/MusicPage";
 
 export default function App() {
   const windowSize = useWindowSize();
@@ -26,7 +27,6 @@ export default function App() {
         <div
           style={{
             width: "100%",
-            maxWidth: windowSize.mobile ? "100%" : "100%", //1200px
             height: "100%",
             justifyContent: "flex-start",
             display: "flex",
@@ -45,6 +45,9 @@ export default function App() {
             <Route path="/projects" exact={true}>
               <ProjectsPage />
             </Route>
+            <Route path="/music" exact={true}>
+              <MusicPage />
+            </Route>
             <Route path="/">
               <HomePage />
             </Route>
@@ -54,12 +57,4 @@ export default function App() {
       </div>
     </Router>
   );
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
 }

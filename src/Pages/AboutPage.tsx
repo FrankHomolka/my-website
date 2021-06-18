@@ -121,12 +121,6 @@ export default function AboutPage() {
           }}
         >
           <div style={columnStyle}>
-            <div style={headerStyle}>Resume</div>
-            <div style={contentStyle}>
-              <DownloadButton link={"resume.pdf"} />
-            </div>
-          </div>
-          <div style={columnStyle}>
             <div style={headerStyle}>Links</div>
             <div style={{ ...contentStyle, flexDirection: "row" }}>
               <a href="https://github.com/FrankHomolka">
