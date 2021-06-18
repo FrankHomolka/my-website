@@ -15,6 +15,7 @@ import thisWebsiteImage from "../Media/this_website.png";
 import ProjectPreview from "../Components/ProjectPreview";
 import { theme } from "../ThemeContext";
 import Button from "../Components/Button";
+import { Link } from "react-router-dom";
 
 interface IProject {
   titleImage?: string;
@@ -53,7 +54,7 @@ export default function HomePage() {
     height: "500px",
     backgroundColor: "black",
     color: "black",
-    opacity: "35%",
+    opacity: "60%",
   };
 
   const projects: IProject[] = [
@@ -105,7 +106,11 @@ export default function HomePage() {
 
   function Slide(props: { image: string; text: string }) {
     return (
-      <div>
+      <div
+        style={{
+          padding: windowSize.mobile ? "0px" : "40px",
+        }}
+      >
         <div style={{ position: "relative" }}>
           <div style={overlayStyle}></div>
           <img style={slideImageStyle} src={props.image} />
@@ -148,12 +153,14 @@ export default function HomePage() {
                 alignItems: "center",
               }}
             >
-              <Button
-                text={"Learn More"}
-                onClick={() => {
-                  console.log("learn more");
-                }}
-              />
+              <Link to={"/projects/"} style={{ textDecoration: "none" }}>
+                <Button
+                  text={"Learn More"}
+                  onClick={() => {
+                    console.log("learn more");
+                  }}
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -162,10 +169,14 @@ export default function HomePage() {
   }
 
   return (
-    <>
+    <div
+      style={{
+        maxWidth: windowSize.mobile ? "100%" : "1200px",
+        width: "100%",
+      }}
+    >
       <div
         style={{
-          width: "100%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -229,6 +240,6 @@ export default function HomePage() {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 }

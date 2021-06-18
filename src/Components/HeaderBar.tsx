@@ -14,13 +14,13 @@ export default function HeaderBar() {
   const linkStyle = {
     fontSize: "20px",
     margin: windowSize.mobile ? "0" : "0 10px",
-    color: "#959FCD",
+    color: "white",
   };
 
   const links: IMenuLink[] = [
     { url: "/", label: "Home" },
     { url: "/about", label: "About" },
-    { url: "/contact/", label: "Contact" },
+    { url: "/projects", label: "Projects" },
   ];
 
   return (
@@ -30,7 +30,7 @@ export default function HeaderBar() {
         height: "100px",
         display: "flex",
         justifyContent: "center",
-        backgroundColor: "#445684",
+        backgroundColor: theme.colors.primary,
       }}
     >
       <div
@@ -48,14 +48,14 @@ export default function HeaderBar() {
           to="/"
           style={{
             textDecoration: "none",
-            fontSize: "50px",
-            color: theme.colors.primary,
+            fontSize: windowSize.mobile ? "50px" : "35px",
+            color: "white",
             marginLeft: "16px",
             fontWeight: "bold",
             fontFamily: "Anonymous Pro",
           }}
         >
-          FH.
+          {windowSize.mobile ? "FH." : "Frank Homolka"}
         </Link>
         {/* Nav Links */}
         {windowSize.mobile ? (

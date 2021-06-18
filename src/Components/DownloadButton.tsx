@@ -6,20 +6,30 @@ import { Link } from "react-router-dom";
 
 export default function DownloadButton(props: { link: string }) {
   return (
-    <div
+    <a
+      href={"../" + props.link}
+      download={props.link}
       style={{
-        backgroundColor: "rgb(149, 159, 205)",
-        color: "white",
-        width: "100px",
+        backgroundColor: "#8aa7ac",
         borderRadius: "20px",
+        width: "30px",
         height: "30px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        margin: "20px",
+        textDecoration: "none",
       }}
     >
-      Download
-    </div>
+      <i
+        style={{
+          fontStyle: "normal",
+          fontFamily: "Material Icons",
+          color: "white",
+          fontSize: "20px",
+        }}
+      >
+        file_download
+      </i>
+    </a>
   );
 }

@@ -62,6 +62,7 @@ export default function MenuButton(props: { links: IMenuLink[] }) {
             <div
               style={{
                 position: "absolute",
+                zIndex: 2,
                 right: "0px",
                 top: "100px",
                 width: "100px",

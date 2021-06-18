@@ -37,7 +37,7 @@ export default function ProjectPreview(props: {
         onMouseEnter={() => {
           setHovered(true);
         }}
-        to={"/projects/" + props.detailLink}
+        to={"/projects/"}
         className="projectPreview"
         style={{
           textDecoration: "none",

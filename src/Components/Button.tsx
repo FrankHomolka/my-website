@@ -16,12 +16,12 @@ export default function Button(props: {
       style={{
         backgroundColor: props.backgroundColor
           ? props.backgroundColor
-          : theme.colors.primary,
+          : "#e55d4d",
         color: "white",
-        width: "140px",
+        width: "200px",
         minWidth: "140px",
         borderRadius: "30px",
-        height: "35px",
+        height: "50px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

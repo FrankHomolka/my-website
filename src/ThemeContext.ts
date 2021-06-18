@@ -23,7 +23,7 @@ const commonColors = {
   accent: "#ff0000",
   background: "#eeeeee",
   foreground: "#000000",
-  primary: "#959FCD",
+  primary: "#5d7557",
   decline: "red",
   secondary: "#EE5465",
   highlight: "#fff099",

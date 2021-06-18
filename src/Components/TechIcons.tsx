@@ -10,6 +10,9 @@ import htmlIcon from "../Media/icons/html-icon.png";
 import javascriptIcon from "../Media/icons/javascript-icon.png";
 import reactIcon from "../Media/icons/react-icon.png";
 import reaperIcon from "../Media/icons/reaper-icon.png";
+import cIcon from "../Media/icons/c-icon.png";
+import javaIcon from "../Media/icons/java-icon.png";
+import pythonIcon from "../Media/icons/python-icon.png";
 
 export default function TechIcons(props: { techIcons: string[] }) {
   const iconStyle: React.CSSProperties = {
@@ -43,6 +46,12 @@ export default function TechIcons(props: { techIcons: string[] }) {
         return reactIcon;
       case "reaper":
         return reaperIcon;
+      case "java":
+        return javaIcon;
+      case "c":
+        return cIcon;
+      case "python":
+        return pythonIcon;
       default:
         return;
     }

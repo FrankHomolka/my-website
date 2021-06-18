@@ -1,4 +1,5 @@
 import { useWindowSize } from "../Functions/useWindowSize";
+import { theme } from "../ThemeContext";
 
 export interface IMenuLink {
   url: string;
@@ -15,7 +16,7 @@ export default function Footer() {
         height: "120px",
         display: "flex",
         justifyContent: "center",
-        backgroundColor: "#445684",
+        backgroundColor: theme.colors.primary,
       }}
     >
       <div
