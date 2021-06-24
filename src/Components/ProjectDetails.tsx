@@ -1,10 +1,8 @@
 import React from "react";
-import { useWindowSize } from "../Functions/useWindowSize";
 import googlePlayImage from "../Media/icons/google-play-icon.png";
 import appStoreImage from "../Media/icons/apple-icon.png";
 import DownloadButton from "./DownloadButton";
 import TechIcons from "./TechIcons";
-import { theme } from "../ThemeContext";
 
 export default function ProjectDetails(props: {
   title: string;
@@ -12,15 +10,14 @@ export default function ProjectDetails(props: {
   titleColor: string;
   coverImage?: string;
   coverVideo?: string;
-  description: string[];
+  description: any[];
   googlePlayLink?: string;
   appStoreLink?: string;
   downloadLink?: string;
   links?: string[];
   techIcons?: string[];
 }) {
-  const contentMaxWidth = "600px";
-  const windowSize = useWindowSize();
+  const contentMaxWidth = "700px";
   return (
     <div
       style={{
@@ -38,12 +35,10 @@ export default function ProjectDetails(props: {
           display: "flex",
           justifyContent: "center",
           width: "100%",
-          backgroundColor: props.titleColor,
           fontSize: "36px",
           fontWeight: "bold",
-          color: "white",
-          margin: "0 0 60px 0",
-          padding: "110px 0",
+          color: "black",
+          padding: "40px 0",
         }}
       >
         {props.title}
@@ -52,8 +47,35 @@ export default function ProjectDetails(props: {
         <img
           src={props.coverImage}
           style={{ width: "100%", maxWidth: "900px" }}
+          alt={""}
         />
       )}
+      {/* Download links */}
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          maxWidth: "900px",
+          flexDirection: "row",
+          justifyContent: "flex-start",
+        }}
+      >
+        {props.googlePlayLink && (
+          <a style={{ margin: "12px 0" }} href={props.googlePlayLink}>
+            <img
+              style={{ width: "35px", marginRight: "12px" }}
+              src={googlePlayImage}
+              alt={""}
+            />
+          </a>
+        )}
+        {props.appStoreLink && (
+          <a style={{ margin: "12px 0" }} href={props.appStoreLink}>
+            <img style={{ width: "35px" }} src={appStoreImage} alt={""} />
+          </a>
+        )}
+        {props.downloadLink && <DownloadButton link={props.downloadLink} />}
+      </div>
       {props.coverVideo && (
         <div style={{ maxWidth: contentMaxWidth, width: "100%" }}>
           <iframe
@@ -69,15 +91,38 @@ export default function ProjectDetails(props: {
       {props.description && (
         <div
           style={{
-            maxWidth: contentMaxWidth,
-            margin: "60px 20px 20px 20px",
             width: "100%",
-            lineHeight: 1.75,
+            maxWidth: "900px",
+            borderBottom: "1px solid lightgray",
+            display: "flex",
+            justifyContent: "center",
           }}
         >
-          {props.description.map((text) => {
-            return text;
-          })}
+          <div
+            style={{
+              maxWidth: contentMaxWidth,
+              margin: "20px",
+              width: "100%",
+              lineHeight: 1.75,
+            }}
+          >
+            {props.description.map((text) => {
+              return text.includes("static") ? (
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                    margin: "16px 0",
+                  }}
+                >
+                  <img style={{ width: "100px" }} src={text} alt={""} />
+                </div>
+              ) : (
+                text
+              );
+            })}
+          </div>
         </div>
       )}
       {/* Downloda links & tech icons */}
@@ -96,26 +141,6 @@ export default function ProjectDetails(props: {
             justifyContent: "center",
           }}
         >
-          {/* Download links */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "flex-start",
-            }}
-          >
-            {props.googlePlayLink && (
-              <a style={{ margin: "12px 0" }} href={props.googlePlayLink}>
-                <img style={{ width: "35px" }} src={googlePlayImage} />
-              </a>
-            )}
-            {props.appStoreLink && (
-              <a style={{ margin: "12px 0" }} href={props.appStoreLink}>
-                <img style={{ width: "35px" }} src={appStoreImage} />
-              </a>
-            )}
-            {props.downloadLink && <DownloadButton link={props.downloadLink} />}
-          </div>
           {/* Tech icons */}
           {props.techIcons && <TechIcons techIcons={props.techIcons} />}
         </div>

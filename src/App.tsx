@@ -32,7 +32,6 @@ export default function App() {
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
-            minHeight: "85vh",
           }}
         >
           <Switch>
@@ -42,14 +41,14 @@ export default function App() {
             <Route path="/contact" exact={true}>
               <ContactPage />
             </Route>
-            <Route path="/projects" exact={true}>
+            <Route path="/projects">
               <ProjectsPage />
             </Route>
             <Route path="/music" exact={true}>
               <MusicPage />
             </Route>
             <Route path="/">
-              <HomePage />
+              <AboutPage />
             </Route>
           </Switch>
         </div>

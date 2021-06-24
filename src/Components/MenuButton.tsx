@@ -4,12 +4,12 @@ import { IMenuLink } from "./HeaderBar";
 
 export default function MenuButton(props: { links: IMenuLink[] }) {
   const [showMenu, setShowMenu] = useState(false);
-  console.log("test");
+
   const linkStyle = {
     textDecoration: "none",
     fontSize: "20px",
     margin: "4px 0",
-    color: "#959FCD",
+    color: "black",
   };
 
   function Button() {
@@ -48,8 +48,7 @@ export default function MenuButton(props: { links: IMenuLink[] }) {
         }}
         style={{
           width: "80px",
-          height: "80px", //40px
-          marginRight: "12px",
+          height: "80px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

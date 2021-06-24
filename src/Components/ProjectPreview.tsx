@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useWindowSize } from "../Functions/useWindowSize";
 import { Link } from "react-router-dom";
 import "../style.css";
@@ -16,79 +16,59 @@ export default function ProjectPreview(props: {
   titleString?: string;
 }) {
   const windowSize = useWindowSize();
-  const [hovered, setHovered] = useState(false);
 
   return (
-    <div
+    <Link
+      to={"/projects/" + props.detailLink}
+      className="projectPreview"
       style={{
-        padding: "0.5%",
-        width: windowSize.mobile ? "100%" : "32%",
-        height: "200px",
+        margin: windowSize.mobile ? "15px 0" : "1%",
+        borderRadius: "20px",
         display: "flex",
-        justifyContent: "center",
-        margin: windowSize.mobile ? "12px 0" : "0",
-        alignItems: "center",
+        position: "relative",
       }}
     >
-      <Link
-        onMouseLeave={() => {
-          setHovered(false);
-        }}
-        onMouseEnter={() => {
-          setHovered(true);
-        }}
-        to={"/projects/"}
-        className="projectPreview"
-        style={{
-          textDecoration: "none",
-          borderRadius: "20px",
-          position: "relative",
-          display: "flex",
-          justifyContent: "flex-start",
-          alignItems: "center",
-          flexDirection: "column",
-        }}
-      >
-        {props.coverImage && (
-          <img
-            src={props.coverImage}
-            style={{
-              width: "100%",
-              height: "800px",
-              objectFit: "cover",
-              borderRadius: "20px",
-              backgroundColor: "transparent",
-            }}
-          />
-        )}
-        {props.titleString && (
-          <div
-            style={{
-              width: "150px",
-              position: "absolute",
-              top: "0",
-              left: "0",
-              color: "white",
-              fontSize: "25px",
-              padding: "5%",
-            }}
-          >
-            {props.titleString}
-          </div>
-        )}
-        {props.titleImage && (
-          <img
-            src={props.titleImage}
-            style={{
-              width: "150px",
-              position: "absolute",
-              top: "0",
-              left: "0",
-              padding: "5%",
-            }}
-          />
-        )}
-      </Link>
-    </div>
+      {props.coverImage && (
+        <img
+          src={props.coverImage}
+          style={{
+            width: "100%",
+            objectFit: "cover",
+            borderRadius: "20px",
+            backgroundColor: "transparent",
+          }}
+          alt={""}
+        />
+      )}
+
+      {props.titleString && (
+        <div
+          style={{
+            width: windowSize.mobile ? "50px" : "150px",
+            position: "absolute",
+            top: "0",
+            left: "0",
+            color: "white",
+            fontSize: windowSize.mobile ? "21px" : "25px",
+            padding: "5%",
+          }}
+        >
+          {props.titleString}
+        </div>
+      )}
+      {props.titleImage && (
+        <img
+          src={props.titleImage}
+          style={{
+            width: windowSize.mobile ? "95px" : "150px",
+            position: "absolute",
+            top: "0",
+            left: "0",
+            padding: "5%",
+          }}
+          alt={""}
+        />
+      )}
+    </Link>
   );
 }

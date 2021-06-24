@@ -1,6 +1,5 @@
-import { Link as Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useWindowSize } from "../Functions/useWindowSize";
-import { theme } from "../ThemeContext";
 import MenuButton from "./MenuButton";
 
 export interface IMenuLink {
@@ -19,7 +18,6 @@ export default function HeaderBar() {
 
   const links: IMenuLink[] = [
     { url: "/", label: "Home" },
-    { url: "/about", label: "About" },
     { url: "/projects", label: "Coding" },
     { url: "/music", label: "Music" },
   ];
@@ -28,7 +26,7 @@ export default function HeaderBar() {
     <div
       style={{
         width: "100%",
-        height: "100px",
+        height: "80px",
         display: "flex",
         justifyContent: "center",
         borderBottom: "1px solid lightgray",

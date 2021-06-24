@@ -1,26 +1,26 @@
 /* Changes project preview css on hover */
 
 .projectPreview {
-  width: 90%;
-  height: 180px;
+  width: 30%;
+  height: 250px;
   box-shadow: 7px 5px 34px -14px rgba(0, 0, 0, 0.75);
   transition: width 0.5s, height 0.5s, box-shadow 0.5s;
 }
 
 .projectPreview:hover {
-  width: 100%;
-  height: 200px;
+  width: 32%;
+  height: 300px;
   box-shadow: 7px 9px 56px -12px rgba(0, 0, 0, 0.75);
 }
 
 /* CSS doesnt change on hover on mobile */
 @media screen and (max-width: 800px) {
   .projectPreview {
-    width: 100%;
-    height: 200px;
+    width: 90%;
+    height: 180px;
   }
   .projectPreview:hover {
-    width: 100%;
-    height: 200px;
+    width: 90%;
+    height: 180px;
   }
 }
