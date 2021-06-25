@@ -31,8 +31,11 @@ export default function MusicPage() {
   };
 
   return (
-    <div
+    <a
+      href="https://open.spotify.com/artist/3NWBPFKAfqlEIYQ2ltSiNZ?si=jGliKLdLRiKYyi6iaJFs5Q"
       style={{
+        textDecoration: "none",
+        color: "black",
         width: "100%",
         display: "flex",
         justifyContent: "center",
@@ -109,34 +112,6 @@ export default function MusicPage() {
           <img src={badDreamsCover} style={imageStyle} alt={""} />
         </div>
       </div>
-      <div
-        style={{
-          fontSize: "40px",
-          paddingLeft: "30px",
-          margin: "40px 0",
-        }}
-      >
-        Other
-      </div>
-      {/*<div
-        style={{
-          width: "100%",
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-evenly",
-        }}
-      >
-        <div style={columnStyle}>
-          <img src={stuckOnElevenCover} style={imageStyle} />
-          <img src={stuckOnElevenCover} style={imageStyle} />
-        </div>
-        <div style={columnStyle}>
-          <img src={stuckOnElevenCover} style={imageStyle} />
-          <img src={stuckOnElevenCover} style={imageStyle} />
-          <img src={stuckOnElevenCover} style={imageStyle} />
-          <img src={stuckOnElevenCover} style={imageStyle} />
-        </div>
-      </div>*/}
-    </div>
+    </a>
   );
 }

@@ -57,10 +57,49 @@ export default function TechIcons(props: { techIcons: string[] }) {
     }
   }
 
+  function getLink(icon: string) {
+    switch (icon) {
+      case "gamemaker":
+        return "https://www.yoyogames.com/en/gamemaker";
+      case "aseprite":
+        return "https://www.aseprite.org/";
+      case "css":
+        return "https://developer.mozilla.org/en-US/docs/Web/CSS";
+      case "dart":
+        return "https://dart.dev/";
+      case "flutter":
+        return "https://flutter.dev/";
+      case "gimp":
+        return "https://www.gimp.org/";
+      case "godot":
+        return "https://godotengine.org/";
+      case "html":
+        return "https://en.wikipedia.org/wiki/HTML";
+      case "javascript":
+        return "https://en.wikipedia.org/wiki/JavaScript";
+      case "react":
+        return "https://reactjs.org/";
+      case "reaper":
+        return "https://www.reaper.fm/";
+      case "java":
+        return "https://www.java.com/en/";
+      case "c":
+        return "https://en.wikipedia.org/wiki/C_(programming_language)";
+      case "python":
+        return "https://www.python.org/";
+      default:
+        return;
+    }
+  }
+
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
       {props.techIcons.map((tech) => {
-        return <img style={iconStyle} src={getIcon(tech)} />;
+        return (
+          <a href={getLink(tech)}>
+            <img style={iconStyle} src={getIcon(tech)} />
+          </a>
+        );
       })}
     </div>
   );

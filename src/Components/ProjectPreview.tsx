@@ -69,6 +69,38 @@ export default function ProjectPreview(props: {
           alt={""}
         />
       )}
+      <div
+        className="projectBlurb"
+        style={{
+          position: "absolute",
+          width: "100%",
+          borderRadius: "20px",
+        }}
+      >
+        <div
+          style={{
+            bottom: "0%",
+            position: "absolute",
+            padding: "5%",
+            color: "white",
+            backgroundColor: "rgba(0, 0, 0, 0.9)",
+          }}
+        >
+          {props.description}
+          <div
+            style={{
+              color: "white",
+              margin: windowSize.mobile ? "20px 0 0 0" : "20px 120px 0 120px",
+              textAlign: "center",
+              backgroundColor: "#e53f29",
+              borderRadius: "20px",
+              padding: "12px",
+            }}
+          >
+            Learn more
+          </div>
+        </div>
+      </div>
     </Link>
   );
 }

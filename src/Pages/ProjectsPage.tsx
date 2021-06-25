@@ -32,7 +32,8 @@ export default function ProjectsPage() {
   const projects: IProject[] = [
     {
       titleImage: hometeamTitleImage,
-      description: "Find providers in your area.",
+      description:
+        "Hometeam lets homeowners find the best service providers in their area based on reviews and a custom map. I designed and implemented most of the pages, components, and front-end functionality of the app.",
       dateCreated: "January 20th, 2021",
       coverImage: hometeamImage,
       googlePlayLink:
@@ -44,14 +45,16 @@ export default function ProjectsPage() {
     },
     {
       titleString: "This Website",
-      description: "Coded with React from the ground up.",
+      description:
+        "Coded from the ground up using React. Simplicity and functionality are the core elements driving the design of this website. I try to keep animations and bloat to a minimum to maximize load time and responsiveness: simple, effective, streamlined.",
       dateCreated: "April 4th, 2021",
       coverImage: thisWebsiteImage,
       detailLink: "this-website",
     },
     {
       titleImage: selmaTitleImage,
-      description: "A touring app for selma.",
+      description:
+        "A physically bounded audio and visual tour guide through the historic city of Selma, Alabama. Features include a custom interactive map using the Google Maps API, audio directions using a custom audio player, photographs linked to each location, and dynamic narration.",
       dateCreated: "January 20th, 2021",
       coverImage: selmaImage,
       googlePlayLink:
@@ -62,14 +65,16 @@ export default function ProjectsPage() {
     },
     {
       titleImage: reposeTitleImage,
-      description: "A game where you run around and play music.",
+      description:
+        "Repose is a short experience designed for two players. Placed in a strange world, the players must collect items from a deserted wasteland to bring life back to the world through plants and music. ",
       dateCreated: "January 20th, 2021",
       coverImage: reposeImage,
       detailLink: "repose",
     },
     {
       titleImage: flowerKnightTitleImage,
-      description: "You're a knight, kill the bad guys.",
+      description:
+        "Flower Knight is a roguelike dungeon crawler inspired by games like Enter The Gungeon and Risk Of Rain. I created it using Gamemaker for programming, Aseprite for art, and Reaper for sound and music.",
       dateCreated: "December 20th, 2021",
       coverImage: flowerKnightImage,
       detailLink: "flower-knight",
