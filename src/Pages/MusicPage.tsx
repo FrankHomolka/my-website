@@ -62,54 +62,77 @@ export default function MusicPage() {
           justifyContent: "space-evenly",
         }}
       >
-        <div style={{ ...columnStyle, marginTop: "25px" }}>
+        <div style={{ ...columnStyle, marginTop: "150px" }}>
           <img
+            className="albumImage"
             src={chestnutStreetCover}
-            style={{ ...imageStyle, height: "300px" }}
+            style={{ ...imageStyle }}
             alt={""}
           />
-          <img src={roadHeadCover} style={imageStyle} alt={""} />
           <img
+            className="albumImage"
+            src={roadHeadCover}
+            style={imageStyle}
+            alt={""}
+          />
+          <img
+            className="albumImage"
             src={beeperBoxBeatsCover}
-            style={{ ...imageStyle, height: "330px" }}
+            style={{ ...imageStyle }}
+            alt={""}
+          />
+          <img
+            className="albumImage"
+            src={stuckOnElevenCover}
+            style={{ ...imageStyle }}
             alt={""}
           />
         </div>
         <div style={{ ...columnStyle, width: "44%" }}>
-          <img src={songsForCowsCover} style={imageStyle} alt={""} />
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
-            <img
-              src={stuckOnElevenCover}
-              style={{ ...imageStyle, width: "48%" }}
-              alt={""}
-            />
-            <img
-              src={desertSongsCover}
-              style={{ ...imageStyle, width: "48%" }}
-              alt={""}
-            />
-          </div>
           <img
+            className="albumImage"
+            src={songsForCowsCover}
+            style={imageStyle}
+            alt={""}
+          />
+          <img
+            className="albumImage"
+            src={desertSongsCover}
+            style={{ ...imageStyle }}
+            alt={""}
+          />
+          <img
+            className="albumImage"
             src={deltaBluesHotTamalesCover}
-            style={{ ...imageStyle, height: "500px" }}
+            style={{ ...imageStyle }}
             alt={""}
           />
         </div>
-        <div style={{ ...columnStyle, marginTop: "25px" }}>
-          <img src={timeMovesSlowCover} style={imageStyle} alt={""} />
+        <div style={{ ...columnStyle, marginTop: "150px" }}>
           <img
-            src={thisAsAMemoryCover}
-            style={{ ...imageStyle, height: "320px" }}
+            className="albumImage"
+            src={timeMovesSlowCover}
+            style={imageStyle}
             alt={""}
           />
-          <img src={wumpusCover} style={imageStyle} alt={""} />
-          <img src={badDreamsCover} style={imageStyle} alt={""} />
+          <img
+            className="albumImage"
+            src={thisAsAMemoryCover}
+            style={{ ...imageStyle }}
+            alt={""}
+          />
+          <img
+            className="albumImage"
+            src={wumpusCover}
+            style={imageStyle}
+            alt={""}
+          />
+          <img
+            className="albumImage"
+            src={badDreamsCover}
+            style={imageStyle}
+            alt={""}
+          />
         </div>
       </div>
     </a>
