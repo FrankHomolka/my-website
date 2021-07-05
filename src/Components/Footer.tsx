@@ -1,8 +1,3 @@
-export interface IMenuLink {
-  url: string;
-  label: string;
-}
-
 export default function Footer() {
   return (
     <div
@@ -11,22 +6,24 @@ export default function Footer() {
         height: "120px",
         display: "flex",
         justifyContent: "center",
+        alignItems: "center",
+        color: "black",
+        fontSize: "12px",
+        fontWeight: "bold",
       }}
     >
-      <div
+      {/* My Email */}
+      <i
         style={{
-          width: "100%",
-          justifyContent: "center",
-          flexDirection: "row",
-          alignItems: "center",
-          display: "flex",
-          fontSize: "12px",
-          fontWeight: "bold",
+          fontStyle: "normal",
+          fontFamily: "Material Icons",
+          fontSize: "20px",
+          marginRight: "8px",
         }}
       >
-        {/* Contact Info */}
-        frankwhomolka@gmail.com
-      </div>
+        mail
+      </i>
+      frankwhomolka@gmail.com
     </div>
   );
 }

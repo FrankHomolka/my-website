@@ -3,6 +3,8 @@ import googlePlayImage from "../Media/icons/google-play-icon.png";
 import appStoreImage from "../Media/icons/apple-icon.png";
 import DownloadButton from "./DownloadButton";
 import TechIcons from "./TechIcons";
+import { useWindowSize } from "../Functions/useWindowSize";
+import { theme } from "../ThemeContext";
 
 export default function ProjectDetails(props: {
   title: string;
@@ -17,6 +19,7 @@ export default function ProjectDetails(props: {
   links?: string[];
   techIcons?: string[];
 }) {
+  const windowSize = useWindowSize();
   const contentMaxWidth = "700px";
   return (
     <div
@@ -30,19 +33,9 @@ export default function ProjectDetails(props: {
         backgroundColor: "white",
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          width: "100%",
-          fontSize: "36px",
-          fontWeight: "bold",
-          color: "black",
-          padding: "40px 0",
-        }}
-      >
-        {props.title}
-      </div>
+      {/* Project title */}
+      <div style={theme.headerStyle}>{props.title}</div>
+      {/* Displays cover image of project */}
       {props.coverImage && (
         <img
           src={props.coverImage}
@@ -54,7 +47,7 @@ export default function ProjectDetails(props: {
       <div
         style={{
           display: "flex",
-          width: "100%",
+          width: windowSize.mobile ? "90%" : "100%",
           maxWidth: "900px",
           flexDirection: "row",
           justifyContent: "flex-start",
@@ -76,6 +69,7 @@ export default function ProjectDetails(props: {
         )}
         {props.downloadLink && <DownloadButton link={props.downloadLink} />}
       </div>
+      {/* Displays cover video about project */}
       {props.coverVideo && (
         <div style={{ maxWidth: contentMaxWidth, width: "100%" }}>
           <iframe
@@ -88,6 +82,7 @@ export default function ProjectDetails(props: {
           ></iframe>
         </div>
       )}
+      {/* Project description */}
       {props.description && (
         <div
           style={{
@@ -106,30 +101,30 @@ export default function ProjectDetails(props: {
               lineHeight: 1.75,
             }}
           >
-            {props.description.map((text) => {
-              return text.includes("static") ? (
-                <div
-                  style={{
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    margin: "16px 0",
-                  }}
-                >
-                  <img style={{ width: "100px" }} src={text} alt={""} />
-                </div>
-              ) : (
-                text
-              );
-            })}
+            {
+              // Allows showing of images between text
+              props.description.map((text) => {
+                return text.includes("static") ? (
+                  <div
+                    style={{
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                      margin: "16px 0",
+                    }}
+                  >
+                    <img style={{ width: "100px" }} src={text} alt={""} />
+                  </div>
+                ) : (
+                  text
+                );
+              })
+            }
           </div>
         </div>
       )}
-      {/* Downloda links & tech icons */}
-      {(props.googlePlayLink ||
-        props.appStoreLink ||
-        props.downloadLink ||
-        props.techIcons) && (
+      {/* Tech icons */}
+      {props.techIcons && (
         <div
           style={{
             margin: "40px 0 0 0",
@@ -141,7 +136,6 @@ export default function ProjectDetails(props: {
             justifyContent: "center",
           }}
         >
-          {/* Tech icons */}
           {props.techIcons && <TechIcons techIcons={props.techIcons} />}
         </div>
       )}

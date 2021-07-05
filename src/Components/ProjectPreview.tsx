@@ -14,6 +14,8 @@ export default function ProjectPreview(props: {
   detailLink: string;
   titleImage?: string;
   titleString?: string;
+  titleWidth?: string;
+  mobileTitleWidth?: string;
 }) {
   const windowSize = useWindowSize();
 
@@ -28,6 +30,7 @@ export default function ProjectPreview(props: {
         position: "relative",
       }}
     >
+      {/* Project Cover image */}
       {props.coverImage && (
         <img
           src={props.coverImage}
@@ -40,7 +43,7 @@ export default function ProjectPreview(props: {
           alt={""}
         />
       )}
-
+      {/* Project title string */}
       {props.titleString && (
         <div
           style={{
@@ -56,11 +59,18 @@ export default function ProjectPreview(props: {
           {props.titleString}
         </div>
       )}
+      {/* Project title image */}
       {props.titleImage && (
         <img
           src={props.titleImage}
           style={{
-            width: windowSize.mobile ? "95px" : "150px",
+            width: windowSize.mobile
+              ? props.mobileTitleWidth
+                ? props.mobileTitleWidth
+                : "120px"
+              : props.titleWidth
+              ? props.titleWidth
+              : "150px",
             position: "absolute",
             top: "0",
             left: "0",
@@ -69,6 +79,7 @@ export default function ProjectPreview(props: {
           alt={""}
         />
       )}
+      {/* Slide up on hover using CSS transitions */}
       <div
         className="projectBlurb"
         style={{
@@ -83,10 +94,13 @@ export default function ProjectPreview(props: {
             position: "absolute",
             padding: "5%",
             color: "white",
+            textAlign: "center",
             backgroundColor: "rgba(0, 0, 0, 0.9)",
           }}
         >
+          {/* Project description */}
           {props.description}
+          {/* Button to learn more about project */}
           <div
             style={{
               color: "white",

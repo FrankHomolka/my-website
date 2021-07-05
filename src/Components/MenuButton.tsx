@@ -12,6 +12,7 @@ export default function MenuButton(props: { links: IMenuLink[] }) {
     color: "black",
   };
 
+  // Returns menu button, outlined if selected
   function Button() {
     return (
       <div
@@ -63,7 +64,7 @@ export default function MenuButton(props: { links: IMenuLink[] }) {
                 position: "absolute",
                 zIndex: 2,
                 right: "0px",
-                top: "100px",
+                top: "80px",
                 width: "100px",
                 backgroundColor: "white",
                 boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",

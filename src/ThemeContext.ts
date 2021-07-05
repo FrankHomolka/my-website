@@ -13,12 +13,6 @@ export interface ITheme {
   };
 }
 
-const commonBoxShadow = "2px 2px 2px 0px rgba(0,0,0,0.25)";
-
-const commonBorder = "solid 1px rgba(0,0,0,0.5)";
-
-const thickBorder = "solid 2px rgba(0,0,0,0.5)";
-
 const commonColors = {
   accent: "#ff0000",
   background: "#eeeeee",
@@ -40,9 +34,13 @@ export const theme: ITheme = {
     highlight: commonColors.highlight,
   },
   headerStyle: {
-    fontFamily: "Anonymous Pro",
+    display: "flex",
+    justifyContent: "center",
+    width: "100%",
     fontSize: "36px",
     fontWeight: "bold",
+    color: "black",
+    padding: "40px 0",
   },
 };
 

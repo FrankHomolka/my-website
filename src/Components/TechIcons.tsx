@@ -22,6 +22,7 @@ export default function TechIcons(props: { techIcons: string[] }) {
     objectFit: "contain",
   };
 
+  // Takes string and returns associated icon
   function getIcon(icon: string) {
     switch (icon) {
       case "gamemaker":
@@ -57,6 +58,7 @@ export default function TechIcons(props: { techIcons: string[] }) {
     }
   }
 
+  // Takes string and returns associated link
   function getLink(icon: string) {
     switch (icon) {
       case "gamemaker":
@@ -97,7 +99,7 @@ export default function TechIcons(props: { techIcons: string[] }) {
       {props.techIcons.map((tech) => {
         return (
           <a href={getLink(tech)}>
-            <img style={iconStyle} src={getIcon(tech)} />
+            <img style={iconStyle} src={getIcon(tech)} alt={""} />
           </a>
         );
       })}

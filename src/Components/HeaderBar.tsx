@@ -10,11 +10,6 @@ export interface IMenuLink {
 export default function HeaderBar() {
   const windowSize = useWindowSize();
   const location = useLocation();
-  const linkStyle = {
-    fontSize: "20px",
-    margin: windowSize.mobile ? "0" : "0 10px",
-    color: "black",
-  };
 
   const links: IMenuLink[] = [
     { url: "/", label: "Home" },
@@ -43,25 +38,26 @@ export default function HeaderBar() {
           display: "flex",
         }}
       >
-        {/* Title */}
+        {/* Website Title */}
         <Link
           to="/"
           style={{
+            width: windowSize.mobile ? "100px" : "100%",
             textDecoration: "none",
-            fontSize: windowSize.mobile ? "50px" : "35px",
+            fontSize: windowSize.mobile ? "22px" : "35px",
             color: "black",
-            paddingLeft: "16px",
+            paddingLeft: windowSize.mobile ? "8px" : "16px",
             fontWeight: "bold",
             fontFamily: "Anonymous Pro",
           }}
         >
-          {windowSize.mobile ? "FH." : "Frank Homolka"}
+          Frank Homolka
         </Link>
-        {/* Nav Links */}
+        {/* Nav Links shown as dropdown button on mobile, and text on desktop */}
         {windowSize.mobile ? (
           <MenuButton links={links} />
         ) : (
-          <div>
+          <>
             {links.map((link) => {
               return (
                 <Link
@@ -69,14 +65,16 @@ export default function HeaderBar() {
                   style={{
                     textDecoration:
                       link.url === location.pathname ? "underline" : "none",
-                    ...linkStyle,
+                    fontSize: "20px",
+                    margin: windowSize.mobile ? "0" : "0 10px",
+                    color: "black",
                   }}
                 >
                   {link.label}
                 </Link>
               );
             })}
-          </div>
+          </>
         )}
       </div>
     </div>

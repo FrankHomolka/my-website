@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
+// Returns the current window size
 export function useWindowSize() {
   const getSize = () => {
     return {
