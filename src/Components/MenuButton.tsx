@@ -20,6 +20,8 @@ export default function MenuButton(props: { links: IMenuLink[] }) {
           width: "36px",
           height: "36px",
           borderRadius: "50%",
+          marginLeft: "40px",
+          marginTop: "-8px",
           backgroundColor: "transparent",
           border: showMenu ? "2px solid black" : "none",
           position: "relative",

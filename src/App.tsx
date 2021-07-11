@@ -2,7 +2,6 @@ import React from "react";
 import AboutPage from "./Pages/AboutPage";
 import HeaderBar from "./Components/HeaderBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useWindowSize } from "./Functions/useWindowSize";
 import Footer from "./Components/Footer";
 import ProjectsPage from "./Pages/ProjectsPage";
 import MusicPage from "./Pages/MusicPage";
