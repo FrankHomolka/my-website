@@ -16,9 +16,9 @@ import pythonIcon from "../Media/icons/python-icon.png";
 
 export default function TechIcons(props: { techIcons: string[] }) {
   const iconStyle: React.CSSProperties = {
-    width: "30px",
+    width: "23px",
     margin: "2px",
-    height: "30px",
+    height: "23px",
     objectFit: "contain",
   };
 

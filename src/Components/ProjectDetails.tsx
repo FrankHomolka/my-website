@@ -1,9 +1,7 @@
 import React from "react";
 import googlePlayImage from "../Media/icons/google-play-icon.png";
 import appStoreImage from "../Media/icons/apple-icon.png";
-import DownloadButton from "./DownloadButton";
 import TechIcons from "./TechIcons";
-import { useWindowSize } from "../Functions/useWindowSize";
 import { theme } from "../ThemeContext";
 
 export default function ProjectDetails(props: {
@@ -80,7 +78,7 @@ export default function ProjectDetails(props: {
           {props.googlePlayLink && (
             <a style={{ margin: "12px 0" }} href={props.googlePlayLink}>
               <img
-                style={{ width: "35px", marginRight: "12px" }}
+                style={{ width: "25px", marginRight: "6px" }}
                 src={googlePlayImage}
                 alt={""}
               />
@@ -88,7 +86,7 @@ export default function ProjectDetails(props: {
           )}
           {props.appStoreLink && (
             <a style={{ margin: "12px 0" }} href={props.appStoreLink}>
-              <img style={{ width: "35px" }} src={appStoreImage} alt={""} />
+              <img style={{ width: "25px" }} src={appStoreImage} alt={""} />
             </a>
           )}
         </div>
@@ -120,7 +118,7 @@ export default function ProjectDetails(props: {
           <div
             style={{
               maxWidth: contentMaxWidth,
-              margin: "20px",
+              margin: "8px 20px 20px 20px",
               width: "100%",
               lineHeight: 1.75,
               textIndent: "20px",

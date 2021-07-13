@@ -8,7 +8,9 @@ import { theme } from "../ThemeContext";
 import hometeamMedia1 from "../Media/hometeam_job.jpg";
 import hometeamMedia2 from "../Media/hometeam_provider.jpg";
 import selmaMedia1 from "../Media/tour_selma_front.jpg";
+import selmaMedia1Mobile from "../Media/tour_selma_front_mobile.jpg";
 import selmaMedia2 from "../Media/tour_selma_app.jpg";
+import selmaMedia2Mobile from "../Media/tour_selma_app_mobile.jpg";
 
 import flowerKnightTitleImage from "../Media/flower_knight_title.png";
 import reposeTitleImage from "../Media/repose_title.png";
@@ -16,6 +18,7 @@ import hometeamTitleImage from "../Media/hometeam_title.png";
 import selmaTitleImage from "../Media/selma_title.png";
 import ProjectPreview from "../Components/ProjectPreview";
 import { useLocation } from "react-router-dom";
+import { useWindowSize } from "../Functions/useWindowSize";
 
 interface IProject {
   titleImage?: string;
@@ -33,6 +36,7 @@ interface IProject {
 
 export default function ProjectsPage() {
   const location = useLocation();
+  const windowSize = useWindowSize();
 
   // Array of project preview data
   const projects: IProject[] = [
@@ -184,12 +188,12 @@ export default function ProjectsPage() {
             "any of them. The learning process mostly consisted of me doing research, reading documentation, and creating a simple pet finder app to ",
             "learn the basics in a hands on way. I got some advice from my co-worked on the development team, but the majority of my learning was self-guided. ",
             "After that, the development team and I felt I was reading to work on a real commercial app. ",
-            selmaMedia1,
+            windowSize.mobile ? selmaMedia1Mobile : selmaMedia1,
             "/tab We decided that Tour Selma was a good fit as it was small enough that I could complete the basic functionality over the ",
             "next three weeks. Within that time I worked by myself, occassionally getting advice from my co-workers on best ways to implement ",
             "certain features, and to get pointers on where I could learn more about things I was unfamiliar with.",
             "At the end of my internship, all of the essential functionality of Tour Selma was completed.",
-            selmaMedia2,
+            windowSize.mobile ? selmaMedia2Mobile : selmaMedia2,
             "/tab The client was able to create tours, populate them with images and audio clips, connect those media elements to pins on ",
             "a custom map, and connect the pins to create a full experience. ",
             "After I left the other developers at MotionMobs implemented the remaining content (audio clips, images, and pins), ",

@@ -1,4 +1,5 @@
 import React from "react";
+import { useWindowSize } from "../Functions/useWindowSize";
 import badDreamsCover from "../Media/albums/bad dreams.jpg";
 import chestnutStreetCover from "../Media/albums/chestnut street.jpg";
 import coffeeRamenCover from "../Media/albums/coffee ramen.jpg";
@@ -13,6 +14,8 @@ import wumpusCover from "../Media/albums/wumpus.jpg";
 import { theme } from "../ThemeContext";
 
 export default function MusicPage() {
+  const windowSize = useWindowSize();
+
   const columnStyle: React.CSSProperties = {
     display: "flex",
     flexDirection: "column",
@@ -21,8 +24,9 @@ export default function MusicPage() {
 
   const imageStyle: React.CSSProperties = {
     margin: "12px 0",
-    objectFit: "cover",
+    objectFit: windowSize.mobile ? "contain" : "cover",
     borderRadius: "25px",
+    width: "100%",
   };
 
   return (
@@ -56,6 +60,7 @@ export default function MusicPage() {
             style={{ ...imageStyle }}
             alt={""}
           />
+
           <img
             className="albumImage"
             src={roadHeadCover}
