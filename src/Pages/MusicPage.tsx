@@ -4,6 +4,7 @@ import badDreamsCover from "../Media/albums/bad dreams.jpg";
 import chestnutStreetCover from "../Media/albums/chestnut street.jpg";
 import coffeeRamenCover from "../Media/albums/coffee ramen.jpg";
 import deltaBluesHotTamalesCover from "../Media/albums/delta blues hot tamales.jpg";
+import wumpusIICover from "../Media/albums/wumpus II.jpg";
 import desertSongsCover from "../Media/albums/desert songs.jpg";
 import roadHeadCover from "../Media/albums/road head.jpg";
 import songsForCowsCover from "../Media/albums/songs for cows.jpg";
@@ -90,13 +91,13 @@ export default function MusicPage() {
           />
           <img
             className="albumImage"
-            src={desertSongsCover}
+            src={wumpusIICover}
             style={{ ...imageStyle }}
             alt={""}
           />
           <img
             className="albumImage"
-            src={deltaBluesHotTamalesCover}
+            src={desertSongsCover}
             style={{ ...imageStyle }}
             alt={""}
           />

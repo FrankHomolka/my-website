@@ -59,14 +59,13 @@ export default function AboutPage() {
             }}
           >
             Hello, I'm <b>Frank Homolka</b>. I'm a programmer, musician, and
-            designer who's interested in creating ethically minded software. I
-            believe in a future where technology is created with a focus on
-            experience and wellbeing of the user over growth and profit oriented
-            mindset. The humanities and technology are no longer separate
-            entities. They're deeply intertwined and will continue to be even
-            more so as time goes on. We need to start working on the large
-            issues coming up within the next few years, especially in regards to
-            social media and Artificial Intelligence.
+            designer who's interested in using my skills in an ethically minded
+            way. I believe in a future where technology is created with a focus
+            on improving the life of the user, not exploiting it. To accomplish
+            that we need to look at the intersection between the humanities and
+            technology, and focus on the large issues coming up within the next
+            few years, especially in regards to social media and Artificial
+            Intelligence.
           </div>
         </div>
         {/* Spotify and github links */}

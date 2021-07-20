@@ -48,7 +48,7 @@ export default function ProjectDetails(props: {
         <div style={{ maxWidth: "900px", width: "100%" }}>
           <iframe
             width="99%"
-            height="400"
+            height="493"
             src={props.coverVideo}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
